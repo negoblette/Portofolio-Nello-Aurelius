@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Nello Aurelius | Full Stack Developer",
+  title: "Portofolio Nello Aurelius",
   description:
     "Portfolio of Nello Aurelius, a Computer Science student at Binus University who builds web apps.",
 };

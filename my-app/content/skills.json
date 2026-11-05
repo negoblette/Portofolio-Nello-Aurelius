@@ -1,0 +1,65 @@
+{
+  "soft": [
+    "Teamwork",
+    "Clear communication",
+    "Negotiation",
+    "Open mind",
+    "Critical thinking"
+  ],
+  "hard": [
+    {
+      "label": "Language",
+      "items": [
+        "JavaScript",
+        "TypeScript",
+        "Python",
+        "PHP",
+        "C"
+      ]
+    },
+    {
+      "label": "Frontend",
+      "items": [
+        "React",
+        "Next.js",
+        "Tailwind CSS"
+      ]
+    },
+    {
+      "label": "Backend",
+      "items": [
+        "FastAPI",
+        "Flask"
+      ]
+    },
+    {
+      "label": "Database",
+      "items": [
+        "PostgreSQL",
+        "MySQL",
+        "Prisma"
+      ]
+    },
+    {
+      "label": "DevOps",
+      "items": [
+        "Docker"
+      ]
+    },
+    {
+      "label": "AI",
+      "items": [
+        "TensorFlow",
+        "n8n"
+      ]
+    },
+    {
+      "label": "Others",
+      "items": [
+        "Video editing",
+        "Content captioning",
+        "Data entry"
+      ]
+    }
+  ]
+}
