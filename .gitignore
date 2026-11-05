@@ -1,0 +1,4 @@
+# Alat bantu lokal, bukan bagian dari website
+.agents/
+.taste-skill/
+skills-lock.json
