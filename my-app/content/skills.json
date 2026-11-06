@@ -37,7 +37,8 @@
       "items": [
         "PostgreSQL",
         "MySQL",
-        "Prisma"
+        "Prisma",
+        "Supabase"
       ]
     },
     {

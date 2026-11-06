@@ -638,6 +638,149 @@
           "shot": true
         }
       ]
+    },
+    {
+      "identity": {
+        "name": "Pelari Kalcer",
+        "slug": "pelari"
+      },
+      "kind": "Personal project",
+      "description": "A running tracker with daily check-ins, weekly streaks, gear mileage and AI training advice, built as a web app you can install on a phone.",
+      "summary": "A running tracker with streaks, gear mileage, an AI coach and friends, built as an installable web app.",
+      "overview": [
+        "Pelari Kalcer is a running tracker for recreational runners. Each day starts with one question, run or rest, and that check-in feeds a weekly streak, a calendar and personal statistics.",
+        "It can be used as a guest, and signing in with an email code saves the data to an account and unlocks friends, a run feed and chat. An AI coach reads recent training and drafts the plan for next week."
+      ],
+      "features": [
+        {
+          "title": "Daily check-in",
+          "text": "Mark each day as run or rest, with distance and pace."
+        },
+        {
+          "title": "Weekly streaks",
+          "text": "A race bib card tracks the streak, runs, distance and pace."
+        },
+        {
+          "title": "Run conditions",
+          "text": "Temperature, rain chance, air quality and the best hour to run."
+        },
+        {
+          "title": "AI coach",
+          "text": "Reads eight weeks of training and plans the next week."
+        },
+        {
+          "title": "Gear mileage",
+          "text": "Distance is added to the chosen pair of shoes automatically."
+        },
+        {
+          "title": "Race mode",
+          "text": "Set a target race, from 5K to a full marathon."
+        },
+        {
+          "title": "Friends and feed",
+          "text": "Connect with a code, then share runs, comments and chat."
+        },
+        {
+          "title": "Installable app",
+          "text": "Add it to a phone home screen and open it like an app."
+        }
+      ],
+      "stack": [
+        {
+          "label": "Frontend",
+          "items": [
+            "Next.js",
+            "React",
+            "Tailwind CSS"
+          ]
+        },
+        {
+          "label": "Backend",
+          "items": [
+            "Next.js route handlers"
+          ]
+        },
+        {
+          "label": "Data and auth",
+          "items": [
+            "Supabase",
+            "Row Level Security",
+            "Email codes"
+          ]
+        },
+        {
+          "label": "AI",
+          "items": [
+            "Google Gemini"
+          ]
+        },
+        {
+          "label": "Services",
+          "items": [
+            "Open-Meteo"
+          ]
+        },
+        {
+          "label": "App",
+          "items": [
+            "PWA",
+            "Service worker"
+          ]
+        }
+      ],
+      "flow": [
+        {
+          "name": "Browser",
+          "role": "Installable web app"
+        },
+        {
+          "name": "Next.js API",
+          "role": "Checks AI requests"
+        },
+        {
+          "name": "Gemini",
+          "role": "Training analysis"
+        },
+        {
+          "name": "Supabase",
+          "role": "Accounts and friends"
+        }
+      ],
+      "notes": [
+        "Only known numbers and fixed run types reach the AI, so notes, routes and gear are never sent.",
+        "A database function limits how many AI requests each account can make.",
+        "Row Level Security limits posts, likes and comments to the owner and their friends.",
+        "A service worker caches pages for the installed app."
+      ],
+      "links": [
+        {
+          "label": "Live site",
+          "href": "https://pelarikalcer.vercel.app/"
+        }
+      ],
+      "image": {
+        "src": "/projects/items/pelari/image/src.jpg",
+        "alt": "The Pelari Kalcer dashboard asking whether today is a run or a rest day, beside a race bib streak card",
+        "caption": "Dashboard",
+        "position": "50% 0%",
+        "shot": true
+      },
+      "gallery": [
+        {
+          "src": "/projects/items/pelari/gallery/0/src.jpg",
+          "alt": "The weekly training plan with a card for each day",
+          "caption": "Weekly plan",
+          "position": "50% 0%",
+          "shot": true
+        },
+        {
+          "src": "/projects/items/pelari/gallery/1/src.jpg",
+          "alt": "The runner profile with a total kilometres bib card",
+          "caption": "Runner profile",
+          "position": "50% 0%",
+          "shot": true
+        }
+      ]
     }
   ]
 }
