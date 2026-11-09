@@ -781,6 +781,128 @@
           "shot": true
         }
       ]
+    },
+    {
+      "identity": {
+        "name": "CV Extractor",
+        "slug": "cv-extractor"
+      },
+      "kind": "Personal project",
+      "description": "An AI tool for recruiters that first checks whether a CV can be read by ATS software, then turns the ones that pass into a structured profile with scores and advice.",
+      "summary": "An AI CV checker that tests ATS readability first, then extracts the CV into structured data with scores and advice.",
+      "overview": [
+        "CV Extractor helps recruiters review CVs in two steps. The first step reads the file the way an ATS would and rejects a CV that the software would misread, together with what to fix.",
+        "A CV that passes is broken down into profile, experience, education, skills, certifications and projects, with aspect scores, strengths, weaknesses and a match against the target role. It needs no account, and files are only read in memory."
+      ],
+      "features": [
+        {
+          "title": "ATS format check",
+          "text": "A score under 60 or one serious issue rejects the CV, with fixes."
+        },
+        {
+          "title": "Layout signals",
+          "text": "Detects tables, text boxes, two columns and contacts in the header."
+        },
+        {
+          "title": "Scanned file guard",
+          "text": "Scanned PDFs are rejected straight away, without calling the AI."
+        },
+        {
+          "title": "Structured extraction",
+          "text": "Profile, experience, education and skills, downloadable as JSON."
+        },
+        {
+          "title": "Scores and advice",
+          "text": "Four aspect scores, strengths, weaknesses and suggestions."
+        },
+        {
+          "title": "Role match",
+          "text": "Compares the CV with a target position when one is given."
+        }
+      ],
+      "stack": [
+        {
+          "label": "Frontend",
+          "items": [
+            "Next.js",
+            "React"
+          ]
+        },
+        {
+          "label": "Backend",
+          "items": [
+            "Next.js route handlers"
+          ]
+        },
+        {
+          "label": "File reading",
+          "items": [
+            "unpdf",
+            "mammoth",
+            "JSZip"
+          ]
+        },
+        {
+          "label": "AI",
+          "items": [
+            "Google Gemini",
+            "Structured JSON output"
+          ]
+        }
+      ],
+      "flow": [
+        {
+          "name": "Browser",
+          "role": "Upload and results"
+        },
+        {
+          "name": "API route",
+          "role": "Two analysis steps"
+        },
+        {
+          "name": "File reader",
+          "role": "Text and layout signals"
+        },
+        {
+          "name": "AI model",
+          "role": "Scores and extraction"
+        }
+      ],
+      "notes": [
+        "PDFs go to the AI as files so the layout can be judged, while Word files are judged from their text.",
+        "Both steps use JSON schemas and a fixed scoring rubric, so the same CV gets the same scores.",
+        "Work durations and totals are calculated in code rather than left to the AI.",
+        "Busy AI models are retried, then a chain of fallback models takes over."
+      ],
+      "links": [
+        {
+          "label": "Live site",
+          "href": "https://extractor-cv-ats.vercel.app/"
+        }
+      ],
+      "image": {
+        "src": "/projects/items/cv-extractor/image/src.jpg",
+        "alt": "The CV Extractor home page with an upload area and an ATS friendly CV template",
+        "caption": "Upload page",
+        "position": "50% 0%",
+        "shot": true
+      },
+      "gallery": [
+        {
+          "src": "/projects/items/cv-extractor/gallery/0/src.jpg",
+          "alt": "The page explaining the two analysis steps",
+          "caption": "How it works",
+          "position": "50% 0%",
+          "shot": true
+        },
+        {
+          "src": "/projects/items/cv-extractor/gallery/1/src.jpg",
+          "alt": "The privacy page explaining how CV files are handled",
+          "caption": "Privacy page",
+          "position": "50% 0%",
+          "shot": true
+        }
+      ]
     }
   ]
 }
